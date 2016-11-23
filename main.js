@@ -92,9 +92,12 @@ $(document).ready(function(){
 	function create_food()
 	{
 		var nx = snake_array[0].x;
-		var max = (w-cw)/cw;	
-		var half = 	(w/2)/cw;
-		//if snake on right
+		var max = (w-cw)/cw;
+		if (max % 2 != 0) {
+			max = max - 1;
+		}	
+		var half = 	max/2;
+		//if snake on right(w/2)/cw
 		if (nx > half) {  
 			//generate on left
 			food = {
