@@ -91,10 +91,25 @@ $(document).ready(function(){
 	//Lets create the food now
 	function create_food()
 	{
-		food = {
-			x: Math.round(Math.random()*(w-cw)/cw), 
-			y: Math.round(Math.random()*(h-cw)/cw), 
-		};
+		var nx = snake_array[0].x;
+		var max = (w-cw)/cw;	
+		var half = 	(w/2)/cw;
+		//if snake on right
+		if (nx > half) {  
+			//generate on left
+			food = {
+				x: Math.round(Math.random()*max/2), 
+				y: Math.round(Math.random()*(h-cw)/cw), 
+			};
+			//console.log("snek on R. half/max:" + half + "/" + max + ", snek:" + nx + ", newfood:" + food.x);	
+		} else {
+			//generate on right
+			food = {
+				x: Math.round(Math.random()*max/2) + half, 
+				y: Math.round(Math.random()*(h-cw)/cw), 
+			};	
+			//console.log("snek on L. half/max:" + half + "/" + max + ", snek:" + nx + ", newfood:" + food.x);	
+		}
 		//This will create a cell with x/y between 0-44
 		//Because there are 45(450/10) positions accross the rows and columns
 	}

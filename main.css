@@ -7,7 +7,6 @@ html, body {
 
 #startScreen {
 	color: #FFF;
-	/*background-image: 'testgif.gif';*/
 	background-color: #FF4C34;
 	height: 100%;
 	width: 100%;
@@ -15,7 +14,7 @@ html, body {
 }
 
 #startContent, #endContent {
-	/*background-color: #444;*/
+	/*background-color: #444; for testing*/
 	font-size: 3em;
 	width: 800px;
 	text-align: center;
